@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+
+    <h1 class="display-4"><%= @friend.first_name + ' ' + @friend.last_name %></h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+
+    <hr class="my-4">
+    <%= render @friend %>
+
+    <div>
+      <%= link_to "Edit this friend", edit_friend_path(@friend), class:"btn btn-outline-dark"%>
+      <%= link_to "Back to friends", friends_path, class:"btn btn-outline-dark"%>
+    </div>
+  </div>
+</div>
