@@ -16,14 +16,16 @@
   <body>
     <%# render tag '...' = Partial render %>
     <%= render 'home/header' %>
-
+    <% if notice.present? %>
+      <%= render 'layouts/alerts' %>
+    <% end %>
     <div class="container">
 
 
       <br>
 
       <%# notice  %>
-      
+
 
       <%= yield %>
     </div>

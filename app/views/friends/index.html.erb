@@ -1,4 +1,3 @@
-<p style="color: green"><%= notice %></p>
 
 <% if user_signed_in? %>
   <h1>Friends List</h1>
@@ -17,7 +16,7 @@
         <% if friend.user === current_user %>
           <tr>
             <td><%= friend.user_id %></td>
-            <td><%= link_to friend.first_name + ' ' + friend.last_name, friend %></td>
+            <td><%= link_to friend.first_name + ' ' + friend.last_name, friend, style: "text-decoration: none;"%></td>
             <td><%= friend.email %></td>
             <td><%= friend.phone %></td>
             <td><%= friend.twitter %></td>
